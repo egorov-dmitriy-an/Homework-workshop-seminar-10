@@ -33,7 +33,6 @@ namespace ConsoleApp
                 }
                 return sequen;
             }
-            
             Console.Write("Введите число выводимых членов послеовательности: ");
             int index = Convert.ToInt32(Console.ReadLine());
             Console.Write("Первые " + index + " членов последовательности: ");
