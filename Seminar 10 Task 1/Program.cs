@@ -11,7 +11,7 @@ namespace ConsoleApp
         {
             Console.WriteLine("");
             Console.WriteLine("=============== Семинар 10 Задача 1 ==================");
-            Console.Write("Введмите исходное число:  ");
+            Console.Write("Введите исходное число:   ");
             string number = Console.ReadLine();
 
             string Reverse(string tempNumber, int index)
@@ -21,7 +21,6 @@ namespace ConsoleApp
                 {
                     revNumber = tempNumber[index] + revNumber;
                     index++;
-                    //Console.WriteLine(revNumber);
                     Reverse(tempNumber, index);
                 }
                 return revNumber;
