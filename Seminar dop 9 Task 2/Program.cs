@@ -13,7 +13,7 @@ namespace ConsoleApp
         {
             Console.WriteLine("");
             Console.WriteLine("================ Семинар 9 Задача 2 доп =============");
-            Console.WriteLine("Введите пароль длиной из 3 строчных латинских букв или цифр от 0 до 9: ");
+            Console.Write("Введите пароль длиной из 3 символов (строчных латинских букв или цифр от 0 до 9): ");
             string parol = Console.ReadLine();
 
             int i = 0;
@@ -39,37 +39,34 @@ namespace ConsoleApp
                                 key = key + alphabet[i] + alphabet[j] + alphabet[k];
                                 if (key != parol)
                                 {
-                                    Console.WriteLine("Вариант № " + count + ", пароль -> " + key);
+                                    Console.WriteLine("Вариант № " + (count + 1) + ", пароль -> " + key);
                                     k++;
                                     count++;
-                                    Search();
                                 }
                                 else
                                 {
                                     mod = 1;
-                                    Console.WriteLine("Искомый пароль вариант № " + count + ", пароль -> " + key);
-                                    Search();
+                                    Console.WriteLine("Искомый пароль вариант № " + (count + 1) + ", пароль -> " + key);
                                 }
                             }
                             else
                             {
                                 j++;
                                 k = 0;
-                                Search();
                             }
                         }
                         else
                         {
                             i++;
                             j = 0;
-                            Search();
                         }
                     }
+                    Search();
                 }
             }
             Search();
             Console.WriteLine("=====================================================");
-            Console.Write("Press any key to continue . . . ");
+            Console.WriteLine("Press any key to continue . . . ");
             Console.ReadKey(true);
         }
     }
